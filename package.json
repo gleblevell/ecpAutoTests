@@ -1,0 +1,19 @@
+{
+  "name": "yop",
+  "version": "1.0.0",
+  "description": "wtf",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress-xpath": "^2.0.1"
+  },
+  "devDependencies": {
+    "cypress": "^13.13.0",
+    "cypress-file-upload": "^5.0.8"
+  }
+}
