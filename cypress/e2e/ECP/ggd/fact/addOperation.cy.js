@@ -1,13 +1,13 @@
 import { login } from '../../login';
 
-it('burenieRotorCreateNewNote', () => {
+it('ggdFactAddOperation', () => {
     login() // Вызов функции авторизации
 
     cy.contains("1тест").click()
     cy.get('[route="tvd"]').click()
     cy.contains('Фактические операции').click()
     cy.get('body').click()
-      // открытие ггд/факт по скважине
+    // открытие ггд/факт по скважине
     
     cy.get('.dd-operation-column > .ant-btn').click()
     cy.get('#idWellSectionType').click()

@@ -1,6 +1,6 @@
 import { login } from '../../../../login';
 
-it('shockTestChangeNewNote', () => {
+it('shockTest_changeNote', () => {
 login() // Вызов функции авторизации
 
 cy.contains("1тест").click()

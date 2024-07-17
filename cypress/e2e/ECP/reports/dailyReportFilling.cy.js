@@ -9,7 +9,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 import { login } from '../login';
 
-it('burenieRotorCreateNewNote', () => {
+it('DailyReportFilling', () => {
     login() // Вызов функции авторизации
 
 

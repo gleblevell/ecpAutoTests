@@ -1,7 +1,7 @@
 import 'cypress-xpath'
 import { login } from '../../login';
 
-it('burenieRotorCreateNewNote', () => {
+it('ggdFactChangeOperation', () => {
     login() // Вызов функции авторизации
 
     cy.contains("1тест").click()

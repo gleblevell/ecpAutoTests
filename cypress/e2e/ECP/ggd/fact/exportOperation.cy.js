@@ -1,9 +1,8 @@
 import { login } from '../../login';
 
-it('burenieRotorCreateNewNote', () => {
+it('ggdFactExportOperations', () => {
     login() // Вызов функции авторизации
 
-  
       cy.contains("1тест").click()
       cy.get('[route="tvd"]').click()
       cy.contains('Фактические операции').click()

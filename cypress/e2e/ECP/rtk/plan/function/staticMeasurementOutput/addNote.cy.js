@@ -1,6 +1,6 @@
 import { login } from '../../../../login';
 
-it('burenieRotorCreateNewNote', () => {
+it('staticMeasurementOutput_addNote', () => {
 login() // Вызов функции авторизации
 
 cy.contains("1тест").click()

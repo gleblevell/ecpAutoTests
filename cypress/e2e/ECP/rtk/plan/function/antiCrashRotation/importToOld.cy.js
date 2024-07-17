@@ -1,6 +1,6 @@
 import { login } from '../../../../login';
 
-it('burenieRotorCreateNewNote', () => {
+it('antiCrushRotation_importToOld', () => {
 login() // Вызов функции авторизации
 
 cy.contains("1тест").click()

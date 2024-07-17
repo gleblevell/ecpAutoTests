@@ -1,6 +1,6 @@
 import { login } from '../../../../login';
 
-it('burenieRotorCreateNewNote', () => {
+it('drillingSlide_importToOld', () => {
 login() // Вызов функции авторизации
 
 

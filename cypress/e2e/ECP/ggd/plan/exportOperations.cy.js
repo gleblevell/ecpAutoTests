@@ -1,6 +1,6 @@
 import { login } from '../../login';
 
-it('burenieRotorCreateNewNote', () => {
+it('ggdPlanExportOperations', () => {
     login() // Вызов функции авторизации
 
   

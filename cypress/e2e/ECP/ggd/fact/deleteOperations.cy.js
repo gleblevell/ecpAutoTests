@@ -1,13 +1,13 @@
 import { login } from '../../login';
 
-it('burenieRotorCreateNewNote', () => {
+it('ggdFactDeleteOperation', () => {
     login() // Вызов функции авторизации
 
     cy.contains("1тест").click()
     cy.get('[route="tvd"]').click()
     cy.contains('Фактические операции').click()
     cy.get('body').click()
-    // открытие ггд/факт по скважине
+// открытие ггд/факт по скважине
     
 cy.get('button[title="Отметить на удаление"]').eq(0).click()
 cy.get('.ant-popconfirm-buttons > .ant-btn-primary > span').click()

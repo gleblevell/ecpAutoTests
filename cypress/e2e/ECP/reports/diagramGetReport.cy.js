@@ -1,7 +1,7 @@
 import 'cypress-xpath'
 import { login } from '../login';
 
-it('burenieRotorCreateNewNote', () => {
+it('diagramGetReport', () => {
     login() // Вызов функции авторизации
 
 
