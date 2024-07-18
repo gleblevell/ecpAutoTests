@@ -1,6 +1,6 @@
 import { login } from '../../login';
 
-it('ggdFactExportSample', () => {
+it('ggdFact_exportSample', () => {
     login() // Вызов функции авторизации 
   
       cy.contains("1тест").click()

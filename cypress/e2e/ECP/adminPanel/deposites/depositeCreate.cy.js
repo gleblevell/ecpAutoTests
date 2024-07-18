@@ -1,5 +1,5 @@
 describe('depositeCreate', () => {
-    it('depositeCreate', async () => {
+    it('adminPanel_depositeCreate', async () => {
       cy.visit('http://test.digitaldrilling.ru/login')
       cy.viewport(1920, 1080)
       cy.get('input#login').type("dev");

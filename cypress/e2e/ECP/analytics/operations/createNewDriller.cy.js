@@ -1,4 +1,4 @@
-describe('createNewDriller', () => {
+describe('analytics_createNewDriller', () => {
     it('createNewDriller', async () => {
       cy.visit('http://test.digitaldrilling.ru/login')
       cy.viewport(1920, 1080)
@@ -19,7 +19,7 @@ describe('createNewDriller', () => {
       cy.get('#name').type('was created')
       cy.get('#patronymic').type('by autotest')
       cy.get('button[title="Сохранить"]').click() 
-      // Создание нового бурильщика
+      //Создание нового бурильщика
 
     })
 })

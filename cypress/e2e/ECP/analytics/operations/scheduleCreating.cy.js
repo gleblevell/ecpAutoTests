@@ -1,4 +1,4 @@
-describe('scheduleCreating', () => {
+describe('analytics_scheduleCreating', () => {
     it('scheduleCreating', async () => {
       cy.visit('http://test.digitaldrilling.ru/login')
       cy.viewport(1920, 1080)
@@ -11,6 +11,8 @@ describe('scheduleCreating', () => {
       cy.get('[route="analytics"]').click()
       cy.get('[route="operations"]').click()
       //Открытие страницы "Операции"
+
+  
       
       cy.get('button.ant-btn').contains('Расписание бурильщиков').click();
       cy.get('button.ant-btn').contains('Расписание бурильщиков').click();

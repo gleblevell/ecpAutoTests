@@ -1,6 +1,6 @@
 import { login } from '../../login';
 
-it('autoDetectedOperationAddOperation', () => {
+it('autoDetectedOperation_addOperation', () => {
     login() // Вызов функции авторизации
    
      cy.contains("1тест").click()

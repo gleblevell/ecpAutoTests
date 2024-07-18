@@ -1,20 +1,26 @@
 import { login } from '../../../../login';
 
-it('burenieRotorCreateNewNote', () => {
+it('reamingSlide_addNote', () => {
 login() // Вызов функции авторизации
 
 cy.contains("1тест").click()
 cy.get('[route="process_map"]').click()
 cy.get('[route="plan"]').click()
 cy.get('[route="operations"]').click()
-cy.get('[route="rotor"]').click()
+cy.get('[route="slide"]').click()
 cy.get('body').click()
-// Открытие страницы "Проработка ротор"   
+// Открытие страницы Проработка слайд   
 
 cy.get('.dd-operation-column > .ant-btn').click()
 cy.get('#idWellSectionType').click()
-cy.get('[style="position: absolute; top: 5px; right: 15px; z-index: 500;"] > .ant-segmented > .ant-segmented-group > :nth-child(2) > .ant-segmented-item-label').click()
-cy.get('.ant-select-tree-title').contains('Направление 1').click()
+cy.get('.ant-segmented-item-label').eq(3).click({force: true})
+cy.get('.ant-select-tree-title').contains('Направление 2').then(($element) => {
+    if (!$element) {
+        cy.get('.ant-select-tree-title').contains('Техническая колонна 2').click()
+    } else {
+        $element.click()
+    }
+})
 cy.get('#depthStart').clear().type(1)
 cy.get('#depthEnd').clear().type(99)
 cy.get('#pressureMax').type(5)
@@ -54,7 +60,7 @@ cy.get('#reaming3StopPointOffBottom').type(22)
 cy.get('#note').type('hello')
 // Заполнение строки
 
-cy.intercept('PUT', '/api/well/41/ProcessMapPlanReamingRotor').as('putRequest'); 
+cy.intercept('PUT', '/api/well/41/ProcessMapPlanReamingSlide').as('putRequest'); 
 //Перехват запроса PUT
 
 cy.get('button[title="Сохранить"]').click();

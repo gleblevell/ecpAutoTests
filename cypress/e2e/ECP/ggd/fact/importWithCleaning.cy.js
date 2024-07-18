@@ -1,6 +1,6 @@
 import { login } from '../../login';
 
-it('ggdFactImportWithCleaning', () => {
+it('ggdFact_importWithCleaning', () => {
     login() // Вызов функции авторизации
   
       cy.contains("1тест").click()

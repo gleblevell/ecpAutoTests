@@ -1,6 +1,6 @@
 import { login } from '../../login';
 
-it('ggdPlanDeleteOperation', () => {
+it('ggdPlan_deleteOperation', () => {
     login() // Вызов функции авторизации
 
   

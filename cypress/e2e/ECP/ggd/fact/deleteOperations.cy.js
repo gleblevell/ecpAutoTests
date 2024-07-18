@@ -1,6 +1,6 @@
 import { login } from '../../login';
 
-it('ggdFactDeleteOperation', () => {
+it('ggdFact_deleteOperation', () => {
     login() // Вызов функции авторизации
 
     cy.contains("1тест").click()
@@ -20,10 +20,4 @@ cy.get('button[type="button"]').contains('Сохранить').click();
 cy.wait('@deleteRequest').its('response.statusCode').should('eq', 200)
 // Удаление и проверка удаления
 
-
-    
-  //*  cy.get('button[title="Отметить на удаление"]').eq(0).click()
-// cy.get('.ant-btn-primary').eq(1).click()
- //   cy.get('button[type="button"]').contains('Сохранить').click();
- // Удаление первой записи на странице
 })

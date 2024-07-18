@@ -1,4 +1,4 @@
-describe('diagramGetReport', () => {
+describe('analytics_addTarget', () => {
     it('diagramGetReport', async () => {
       cy.visit('http://test.digitaldrilling.ru/login')
       cy.viewport(1920, 1080)

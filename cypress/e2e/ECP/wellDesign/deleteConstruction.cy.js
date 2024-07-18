@@ -1,16 +1,14 @@
 import { login } from '../login';
 
-it('burenieRotorCreateNewNote', () => {
+it('wellDesign_deleteConstruction', () => {
     login() // Вызов функции авторизации
 
-      cy.contains("1тест").click()
-      cy.get('[route="well_designs"]').click()
-      cy.get('[route="plan"]').click()
-      //Открытие страницы "Конструкция скважины"
-      cy.contains("1тест").click()
-      cy.get('[route="well_designs"]').click()
-      cy.get('[route="plan"]').click()
-      //Открытие страницы "Конструкция скважины"
+    cy.contains("1тест").click()
+    cy.get('[route="process_map"]').click()
+    cy.get('[route="plan"]').click()
+    cy.get('[route="well_designs"]').click()
+    //Открытие страницы "Конструкция скважины"
+
       
       cy.get('button[title="Удаление конструкции"]').eq(0).click()
       cy.intercept('DELETE', 'http://test.digitaldrilling.ru/api/well/41/WellSectionPlan?*').as('deleteRequest')

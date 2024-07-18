@@ -1,6 +1,6 @@
 import { login } from '../../../../login';
 
-it('tabLoadCapacityExportSample', () => {
+it('tabLoadCapacity_ExportSample', () => {
 login() // Вызов функции авторизации
 
 cy.contains("1тест").click()

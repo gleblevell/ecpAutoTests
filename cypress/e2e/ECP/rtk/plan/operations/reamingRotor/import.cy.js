@@ -1,6 +1,6 @@
 import { login } from '../../../../login';
 
-it('burenieRotorCreateNewNote', () => {
+it('reamingRotor_import', () => {
 login() // Вызов функции авторизации
 
 

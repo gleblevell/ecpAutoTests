@@ -1,5 +1,5 @@
 describe('wellCreate', () => {
-    it('wellCreate', async () => {
+    it('adminPanel_wellCreate', async () => {
       cy.visit('http://test.digitaldrilling.ru/login')
       cy.viewport(1920, 1080)
       cy.get('input#login').type("dev");

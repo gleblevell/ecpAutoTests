@@ -1,6 +1,6 @@
 import { login } from '../../login';
 
-it('ggdPlanFilterByDepth', () => {
+it('ggdPlan_filterByDepth', () => {
     login() // Вызов функции авторизации
 
   

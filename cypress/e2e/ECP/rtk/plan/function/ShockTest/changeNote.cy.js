@@ -15,6 +15,7 @@ cy.get('button[title="Редактировать"]').eq(0).click()
 
 cy.get('.ant-select-selection-item').click()
 cy.get('[style="position: absolute; top: 5px; right: 15px; z-index: 500;"] > .ant-segmented > .ant-segmented-group > :nth-child(2) > .ant-segmented-item-label').click()
+// заменить верхнюю строчку на     cy.get('.ant-segmented-item-label').eq(3).click({force: true})
 cy.get('.ant-select-tree-title').contains('Кондуктор 3').click()
 cy.get('#depthStart').clear().type(799)
 cy.get('#depthEnd').clear().type(899)

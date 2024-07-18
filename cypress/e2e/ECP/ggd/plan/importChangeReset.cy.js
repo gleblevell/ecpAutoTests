@@ -1,6 +1,6 @@
 import { login } from '../../login';
 
-it('ggdPlanImportChangeReset', () => {
+it('ggdPlan_importChangeReset', () => {
     login() // Вызов функции авторизации
   
       cy.contains("1тест").click()

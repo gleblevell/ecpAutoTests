@@ -1,6 +1,6 @@
 import { login } from '../../login';
 
-it('burenieRotorCreateNewNote', () => {
+it('startscreen_addContact', () => {
     login() // Вызов функции авторизации
 
 

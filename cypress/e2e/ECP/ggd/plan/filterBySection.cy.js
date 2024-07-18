@@ -1,6 +1,6 @@
 import { login } from '../../login';
 
-it('ggdPlanFilterBySection', () => {
+it('ggdPlan_filterBySection', () => {
     login() // Вызов функции авторизации
   
     cy.contains("1тест").click()

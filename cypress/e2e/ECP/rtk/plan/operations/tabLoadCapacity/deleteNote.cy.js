@@ -1,15 +1,15 @@
 import { login } from '../../../../login';
 
-it('prorabotkaSlideDeleteNote', () => {
+it('tabLoadCapacity_deleteNote', () => {
 login() // Вызов функции авторизации
 
 cy.contains("1тест").click()
 cy.get('[route="process_map"]').click()
 cy.get('[route="plan"]').click()
 cy.get('[route="operations"]').click()
-cy.get('[route="slide"]').click()
+cy.get('[route="load_capacity"]').click()
 cy.get('body').click()
-// Открытие страницы Проработка слайд   
+// Открытие страницы "Выработка нагрузки"  
 
 cy.intercept('DELETE', '/api/well/41/ProcessMapPlanSlide', (req) => {
     req.reply({ statusCode: 200 })

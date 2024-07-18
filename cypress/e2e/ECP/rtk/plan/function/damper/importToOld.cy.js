@@ -12,7 +12,7 @@ cy.get('body').click()
 // Открытие страницы демпфер
 
 cy.get('button[title="Импорт-Экспорт"]').click()
-cy.get('span > input[type="file"]').eq(0).selectFile("C:\\Users\\admin\\Desktop\\ECP\\cypress\\filesForAutoTests\\tabLoadCapacityImport.xlsx", {force: true})
+cy.get('span > input[type="file"]').eq(0).selectFile("C:\\Users\\admin\\Desktop\\ECP\\cypress\\filesForAutoTests\\сделать файл.xlsx", {force: true})
 cy.get('button[type="button"]').contains('Импорт').click()
 //Загрузка файла и открытие окна "Окно обратотки данных"
 

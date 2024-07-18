@@ -1,6 +1,6 @@
 import { login } from '../../login';
 
-it('ggdPlanExportSample', () => {
+it('ggdPlan_exportSample', () => {
     login() // Вызов функции авторизации
     
   

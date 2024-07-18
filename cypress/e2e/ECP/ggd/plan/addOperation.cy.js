@@ -1,6 +1,6 @@
 import { login } from '../../login';
 
-it('ggdPlanAddOperation', () => {
+it('ggdPlan_addOperation', () => {
     login() // Вызов функции авторизации
 
     cy.contains("1тест").click()
@@ -11,10 +11,10 @@ it('ggdPlanAddOperation', () => {
     
     cy.get('.dd-operation-column > .ant-btn').click()
     cy.get('#idWellSectionType').click()
-    cy.get('[style="position: absolute; top: 5px; right: 15px; z-index: 500;"] > .ant-segmented > .ant-segmented-group > :nth-child(2) > .ant-segmented-item-label').click()
+    cy.get('.ant-segmented-item-label').eq(3).click({force: true})
     cy.get('.ant-select-tree-title').contains('Направление 1').click()
     cy.get('input#idCategory').click()
-    cy.get(':nth-child(6) > .ant-select-dropdown > :nth-child(1) > :nth-child(1) > [style="position: absolute; top: 5px; right: 15px; z-index: 500;"] > .ant-segmented > .ant-segmented-group > :nth-child(2) > .ant-segmented-item-label > .ant-segmented-item-icon').click()
+    cy.get('.ant-segmented-item-label').eq(5).click({force: true})
     cy.get('span.ant-select-tree-title').contains('Разборка КНБК').click()
     cy.get('#categoryInfo').type("text")
     cy.get('#depthStart').clear().type('1000');

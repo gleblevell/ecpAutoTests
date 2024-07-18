@@ -1,7 +1,7 @@
 import 'cypress-xpath'
 import { login } from '../../login';
 
-it('ggdFactChangeOperation', () => {
+it('ggdFact_changeOperation', () => {
     login() // Вызов функции авторизации
 
     cy.contains("1тест").click()
@@ -12,10 +12,26 @@ it('ggdFactChangeOperation', () => {
     // открытие ггд/факт по скважине
 
     cy.get('button[title="Редактировать"]').eq(0).click()
-    cy.contains('span', 'Направление 1').click()
-    cy.get('[style="position: absolute; top: 5px; right: 15px; z-index: 500;"] > .ant-segmented > .ant-segmented-group > :nth-child(2) > .ant-segmented-item-label > .ant-segmented-item-icon').click()
+    cy.get('#idWellSectionType').click( {force: true} )
+    cy.get('.ant-segmented-item-label').eq(3).click({force: true})
     cy.get('.ant-select-tree-title').contains('Направление 3').click()
-    cy.get(':nth-child(3) > .ant-form-item > .ant-row > .ant-col > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector > .ant-select-selection-item').click() //
-    cy.get(':nth-child(3) > .ant-select-tree-switcher').click( { multiple: true } )
+    cy.get('#idCategory').click( {force: true} )
+    cy.get('.ant-segmented-item-label').eq(3).click({force: true})
+    cy.get('span.ant-select-tree-title').contains('Бурение').click()
+    cy.get('#categoryInfo').type("text")
+    cy.get('#depthStart').clear().type('299');
+    cy.get('#depthEnd').clear().type('399')
+    cy.get('#day').clear().type('1')
+    cy.get('#durationHours').clear().type('2')
+    cy.get('#comment').type('hello from autotest')
 
+    cy.intercept('PUT', '/api/well/41/wellOperations').as('putRequest'); 
+    //Перехват запроса PUT
+    
+    cy.get('button[title="Сохранить"]').click();
+    cy.get('button[type="button"]').contains('Сохранить').click();
+    cy.wait('@putRequest').then((interception) => {
+        expect(interception.response.statusCode).to.equal(200);
+    // Cохранение и проверка 
+    })
 })
