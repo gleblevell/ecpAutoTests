@@ -11,9 +11,16 @@ it('wellDesign_addConstruction', () => {
 
       cy.get('button[title="Добавление конструкции"]').click()
       cy.get('#idSectionType').click()
-
       cy.get('.ant-segmented-item-label').eq(3).click({force: true})
-      cy.get('.ant-select-tree-node-content-wrapper > .ant-select-tree-title').eq(5).click()
+
+            cy.get('.ant-select-tree-title').contains('Направление 2').then(($element) => {
+        if (!$element) {
+            cy.get('.ant-select-tree-title').contains('Техническая колонна 2').click()
+        } else {
+            $element.click()
+        }
+    })
+
       cy.get('#depthStart').type('100')
       cy.get('#depthEnd').type('200')
       cy.get('#outerDiameter').type('99')

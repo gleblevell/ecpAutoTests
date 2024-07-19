@@ -14,7 +14,13 @@ cy.get('body').click()
 cy.get('.dd-operation-column > .ant-btn').click()
 cy.get('#idWellSectionType').click()
 cy.get('.ant-segmented-item-label').eq(3).click({force: true})
-cy.get('.ant-select-tree-title').contains('Направление 4').click()
+cy.get('.ant-select-tree-title').contains('Направление 2').then(($element) => {
+    if (!$element) {
+        cy.get('.ant-select-tree-title').contains('Техническая колонна 2').click()
+    } else {
+        $element.click()
+    }
+})
 cy.get('#depthStart').clear().type(399)
 cy.get('#depthEnd').clear().type(499)
 cy.get('#weightOnBitMin').type(1)

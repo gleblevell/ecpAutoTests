@@ -10,22 +10,23 @@ it('burenieRotorCreateNewNote', () => {
       // Открытие страницы "Плановая траектория"
 
       cy.get('button[title="Импорт-Экспорт"]').click()
-      cy.get('span > input[type="file"]').eq(0).selectFile("C:\\Users\\admin\\Desktop\\cetest\\cypress\\planTrajectoryForAutotest.xlsx", {force: true})
+      cy.get('span > input[type="file"]').eq(0).selectFile("C:\\Users\\admin\\Desktop\\ECP\\cypress\\filesForAutoTests\\planTrajectoryForAutotest.xlsx", {force: true})
       cy.get('button[type="button"]').contains('Импорт').click()
       //Добавление файла и открытие окна обработки данных
 
-      cy.contains(':nth-child(7) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content', '1723').should('exist')
-      cy.contains(':nth-child(7) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content', '180').should('exist')
-      cy.contains(':nth-child(7) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content', '321').should('exist')
-      cy.contains(':nth-child(7) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content', '123').should('exist')
-      cy.contains(':nth-child(7) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content', '999').should('exist')
-      cy.contains(':nth-child(7) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content', '15').should('exist')
+      cy.contains(':nth-child(7) > .ant-modal-root > .ant-modal-wrap > .ant-modal > [tabindex="-1"] > .ant-modal-content', '1723').should('exist')
+
+      cy.contains(':nth-child(7) > .ant-modal-root > .ant-modal-wrap > .ant-modal > [tabindex="-1"] > .ant-modal-content', '180').should('exist')
+      cy.contains(':nth-child(7) > .ant-modal-root > .ant-modal-wrap > .ant-modal > [tabindex="-1"] > .ant-modal-content', '321').should('exist')
+      cy.contains(':nth-child(7) > .ant-modal-root > .ant-modal-wrap > .ant-modal > [tabindex="-1"] > .ant-modal-content', '123').should('exist')
+      cy.contains(':nth-child(7) > .ant-modal-root > .ant-modal-wrap > .ant-modal > [tabindex="-1"] > .ant-modal-content', '999').should('exist')
+      cy.contains(':nth-child(7) > .ant-modal-root > .ant-modal-wrap > .ant-modal > [tabindex="-1"] > .ant-modal-content', '15').should('exist')
       // Проверка на то, что данные в каждом столбике не изменились 
     
       cy.contains('button', 'Сохранить новые и очистить старые записи').click();
       // Добавление с очисткой старых записей
 
-      cy.get(':nth-child(6) > .ant-modal-root > .ant-modal-wrap > .ant-modal > .ant-modal-content > .ant-modal-close').click()
+      cy.get(':nth-child(6) > .ant-modal-root > .ant-modal-wrap > .ant-modal > [tabindex="-1"] > .ant-modal-content > .ant-modal-close')
       // Закрытие окна "Импорт-экспорт"
 
       cy.get('button[title="Редактирование плановой траектории"]').should('have.length.at.most', 3);
